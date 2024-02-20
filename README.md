@@ -9,14 +9,15 @@
     
 4. After the filteration criteria we have applied Depth filter >= 15. Then we have developed In-House python scripts for the
    
-    **Condition1**: The 13 genes coordinates file consider as the Support file for consition2. Each gene coordinates contains the chromosome, start, and end positions columns. Mapped the each vcf file with the coordinates file and retrieved the variants those are lies in between the genes region also extracted the covered variants from KAPA bed file. once extracted the excel files for each sample pooled the respective counts for the each position using (CHROM, POS, REF, ALT, Zygosity) columns.
+    **Condition1**: The 13 genes coordinates file consider as the Support file for condition1. Each gene coordinates contains the chromosome, start, and end positions columns. Mapped each vcf file with the coordinates file and retrieved the variants those lies in between the selective gene coordinates, then extracted only the variants that covers in range of the KAPA bed file coordinates. After the extraction of these excel files for each individual sample, pooled the respective counts for the each position based on (CHROM, POS, REF, ALT, Zygosity) columns.
    
-   **Condition2**: From the 13 genes single shared exact variant positional information extracted the variants those are from the vcf files on the basis of CHROM, POS, REF, ALT columns and verified these variants with the KAPA bed file to know the variants coverage status. Final output contains the 13 gene variants along with the covered status of all the 1232 samples. 
+   **Condition2**: From the 13 genes, Now we have considered only single shared variant positional information, extracted the variants based on CHROM, POS, REF, ALT columns and verified these variants with the KAPA bed file to know the variants coverage status. Final output contains the 13 genes single shared variants along with the covered status of all the 1232 samples. 
 
-   **Condition3**: the 13 genes single shared variants mapped with the vcf files and extracted the exact upstream and downstream positions those are near with Bed file and retrieved the minimal distance positions to identify the nearest snp for vcf files.
+   **Condition3**: the 13 genes single shared variants mapped with the vcf files and extracted the exact start and end position those are near with Bed file and retrieved the minimal distance positions to identify the nearest upstream or downstream snp.
+
 These scripts include
 
    **Diplotypes**: The output files of the condition2 are the input files for this diplotypes. On the factorial method extracted the number diplotypes for each gene of all samples using their haplotype. 
 
-and counts of the resulted star alleles based on zygosity, avg read depth from the vcf files. 
+and got counts of the resulted star alleles based on zygosity, avg read depth from the vcf files. 
 
