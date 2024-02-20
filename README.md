@@ -1,4 +1,4 @@
-**Analysis of Pharmacogenes** 
+**Analysis of Pharmacogenes with 1232 In-House patient VCF samples** 
 
 1. We have extracted the all star allele rsID's and the genomic positions from the allele defination tables for level 1A, 1B 13 genes (CYP3A4, CYP2C19, CYP2B6, NAT2, CYP3A5, SLCO1B1, CYP2C9, G6PD, NUDT15, UGT1A1, CYP2D6, TPMT, CYP2A6) using rsID_Genomic_pos_extraction python script.
 
